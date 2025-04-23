@@ -8,9 +8,21 @@ import jade.util.ExtendedProperties ;
 import jade.wrapper.AgentContainer ;
 import jade.wrapper.AgentController;
 import jade.wrapper.ControllerException ;
+import javafx.application.Application;
+import javafx.stage.Stage;
 
-public class SecretaireContainer {
+public class SecretaireContainer extends Application {
     public static void main(String[] args){
+        launch(SecretaireContainer.class) ;
+    }
+
+    @Override
+    public void start(Stage primaryStage){
+        startContainer();
+        primaryStage.setTitle("Secretaire Form") ;
+    }
+
+    public void startContainer(){
         try{
             Runtime runtime = Runtime.instance() ;
             Properties properties = new ExtendedProperties() ;

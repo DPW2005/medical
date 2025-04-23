@@ -20,7 +20,7 @@ public class MedecinAgent extends Agent {
             System.out.println("Avant la migration......du container "+this.getContainerController().getContainerName()) ;
         }
         catch(ControllerException e){
-            e.printStackTrace() ;
+            e.printStackTrace();
         }
     }
 

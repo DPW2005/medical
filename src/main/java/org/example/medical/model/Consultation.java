@@ -1,9 +1,16 @@
 package org.example.medical.model;
 
 public class Consultation {
-    public long id ;
-    public String hour ;
-    public String date ;
-    public Medecin medecin ;
+    public Medecin medecin; // Utilisation de Medecin comme objet
     public Patient patient ;
+    public String heure;
+    public String lieu;
+
+    public Consultation(Medecin medecin, Patient patient, String heure, String lieu) {
+        this.medecin = medecin ;
+        this.patient = patient ;
+        this.heure = heure ;
+        this.lieu = lieu ;
+    }
+    // Getters/Setters et propriétés JavaFX...
 }

@@ -7,10 +7,12 @@ import java.sql.SQLException;
 
 public abstract class BaseRepository {
 
-    private static final String JDBC_URL = "jdbc:sqlite:hospital.db" ;
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/hospital?serverTimezone=UTC" ;
+    private static final String user = "root" ;
+    private static final String password = "" ;
 
     protected Connection getConnecion() throws SQLException {
-        return DriverManager.getConnection(JDBC_URL) ;
+        return DriverManager.getConnection(JDBC_URL,user,password) ;
     }
 
     protected void closeQuietly(AutoCloseable closeable){

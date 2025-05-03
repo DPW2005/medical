@@ -30,7 +30,7 @@ public class Medecin {
         this.service = service;
     }
 
-    public boolean isAble() {
+    public boolean getAble() {
         return isAble;
     }
 
